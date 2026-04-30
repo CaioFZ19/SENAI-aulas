@@ -1,15 +1,12 @@
 programa {
   funcao inicio() {
 
-
-
     //variáveis 
 
 cadeia nome
 real nota1
 real nota2
 real nota3
-
 
 
     //Atribuição de valores
@@ -23,7 +20,6 @@ leia (nota2) ("\n")
 escreva ("Insira sua terceira nota: ")
 leia (nota3) ("\n")
 escreva ("\n")
-
 
 
     //Resultados
@@ -50,13 +46,14 @@ escreva ("\n")
 escreva ("-------------------- \n")
 
 
-
     //conclusão
 
 se (media >= 7) {
   escreva ("------Aprovado------")
-} senao {
+} senao se (media >= 4 e media < 7) {
   escreva ("-----Recuperação-----")
+} senao {
+  escreva ("-----Reprovado-----")
 }
 
 escreva ("\n")
