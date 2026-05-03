@@ -16,8 +16,8 @@ cinquenta = saque / 50
 vinte = (saque - (cinquenta * 50)) / 20
 dez = (saque - (cinquenta * 50) - (vinte * 20)) / 10
 
-    //Solução
-se (saque >= 10 e saque > 0) {
+    //Cálculos e Resultado
+se ((saque >= 10) e (saque % 10 == 0)) {
   se (saque >= 50) {
     escreva (cinquenta)
     escreva (" nota(s) de R$50,00")
@@ -33,7 +33,7 @@ se (saque >= 10 e saque > 0) {
   }
 
 } senao {
-  escreva ("Valor indisponível, digite um número múltiplo de 10")
+  escreva ("Valor indisponível.")
 }
 
 escreva ("\n")
