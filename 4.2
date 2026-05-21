@@ -1,0 +1,29 @@
+let prompt = require ('prompt-sync')() 
+
+let nome = prompt ("Digite seu nome: ")
+let n1 = Number (prompt ("Digite sua primeira nota: "))
+let n2 = Number (prompt ("Digite sua segunda nota: "))
+let n3 = Number (prompt ("Digite sua terceira nota: "))
+let media = (Number ((n1 + n2 + n3) / 3))
+let resultado
+
+console.log("====================================") 
+console.log("          BOLETIM ESCOLAR           ") 
+console.log("nome: " + nome ) 
+console.log("nota 1: " + n1) 
+console.log("nota 2: " + n2) 
+console.log("nota 3: " + n3) 
+console.log("------------------------------------") 
+console.log("media: " + media )
+
+if (media >= 6) {
+    console.log ("Aprovado!")
+} 
+
+if (media < 6 && media >= 4) {
+    console.log ("Em recuperação")
+} 
+
+if (media < 4) {
+    console.log ("Reprovado")
+}
