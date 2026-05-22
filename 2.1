@@ -1,0 +1,7 @@
+
+const cargo = "DEV"
+const chaveativa = true
+const emManutencao = false
+const acesso = !emManutencao && (cargo == "DEV" || cargo == "ADMIN") && (chaveativa == true)
+
+console.log (acesso)
