@@ -1,0 +1,18 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let nome = prompt ("Qual o seu nome? ")
+
+let vip = prompt ("Você tem o passe VIP? (true/false) ") === "true"
+if (vip == true) {
+    console.log (`Seja bem vindo, ${nome}!`)
+} else {
+    let ingresso = prompt ("Ok, você tem o ingresso? (true/false) ") === "true"
+    let idade = Number (prompt ("E quantos anos você tem? "))
+
+    if ((ingresso == true) && (idade >= 18)) {
+        console.log (`Seja bem vindo, ${nome}!`)
+    } else {
+        console.log ("Você não é bem vindo aqui.")
+    }
+}

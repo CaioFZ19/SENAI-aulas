@@ -1,0 +1,18 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+
+let temperatura = Number (prompt ("Qual a temperatura atual? "))
+let umidade = Number (prompt ("Qual a umidade atual? "))
+
+
+if (temperatura >= 35) {
+  console.log ("Alerta de calor!!!")
+} if (temperatura <= 5) {
+  console ("Risco de geada!!!")
+} if (umidade < 30) {
+  console.log ("Ar muito seco!!!")
+  
+} if ((temperatura >= 18) && (temperatura <= 28) && (umidade >= 40)) {
+  console.log ("Condições ideais")
+}

@@ -1,0 +1,12 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let numero = Number (prompt ("Digite um número: "))
+
+if (numero > 0) {
+    console.log ("Seu número é positivo")
+} if (numero < 0) {
+    console.log ("Seu número é negativo")
+} if (numero == 0) {
+    console.log ("Seu número é zero")
+}

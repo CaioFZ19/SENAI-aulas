@@ -1,0 +1,15 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+const senhaCorreta = 1234
+let senha = prompt ("Digite a senha: ")
+
+if (senha == senhaCorreta) {
+    console.log ("Bem vindo.")
+} else { 
+    for (let contador = 1 ; contador < 5 && senha != senhaCorreta ; contador ++)  {
+        console.log ("Senha incorreta.")
+        senha = prompt ("Digite a senha novamente: ")
+    }
+    console.log ("Bem vindo.")
+}
