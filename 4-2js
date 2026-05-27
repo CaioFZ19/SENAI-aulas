@@ -1,0 +1,39 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let nome = String (prompt ("Qual o seu nome? "))
+let n1 = Number (prompt ("Insira sua primeira nota: "))
+let n2 = Number (prompt ("Insira sua segunda nota: "))
+let n3 = Number (prompt ("Insira sua terceira nota: "))
+let faltas = Number (prompt ("Quantas faltas você teve no ano? "))
+let media = ((n1 + n2 + n3) / 3)
+let resultado = String
+let conceito = String
+
+if ((media >= 8) && (faltas <= 15)) {
+    resultado = ("Aprovado!")
+    conceito = ("A - Excelente")
+} else if ((media >= 6) && (faltas <= 25)) {
+    resultado = ("Aprovado!")
+    conceito = ("B - Bom")
+} else if ((media >= 4) && (faltas <= 25)) {
+    resultado = ("Recuperação!")
+    conceito = ("C - Recuperação")
+} if (faltas > 25) {
+    resultado = ("Reprovado por falta.")
+    conceito = ("D - insuficiente")
+} if (media < 4) {
+    resultado = ("Reprovado.")
+    conceito = ("D - insuficiente")
+}
+
+console.log ("==============================")
+console.log ("       BOLETIM ESCOLAR        ")
+console.log ("==============================")
+console.log (`Aluno : ${nome}`)
+console.log (`Média : ${media.toFixed(1)}`)
+console.log (`Faltas : ${faltas}`)
+console.log ("------------------------------")
+console.log (`Resultado : ${resultado}`)
+console.log (`Conceito : ${conceito}`)
+console.log ("==============================")
