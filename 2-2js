@@ -1,0 +1,19 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let notas = Number (prompt ("digite suas notas (-1 para finalizar): "))
+let soma = 0, qnotas = 1
+
+soma = soma + notas
+
+while (notas != -1) { 
+  notas = Number (prompt ("digite suas notas (-1 para finalizar): "))
+  if (notas != -1) {
+    soma = soma + notas
+    qnotas ++
+  }
+} 
+
+console.log (`Total de notas: ${qnotas}`)
+console.log (`Soma das notas: ${soma}`)
+console.log (`Média das notas: ${(soma / qnotas).toFixed(2)}`)
