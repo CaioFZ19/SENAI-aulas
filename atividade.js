@@ -23,6 +23,10 @@ for (let i = 0 ; i <= 2 ; i++) {
             pao = "Ciabatta"
             preco = preco + 2.5
         }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
+        }
     }
 
     else if (i == 1){
@@ -37,6 +41,10 @@ for (let i = 0 ; i <= 2 ; i++) {
         } else if (recheio == 3) {
             recheio = "Vegetariano"
             preco = preco + 4
+        }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
         }
     }
 
@@ -53,6 +61,10 @@ for (let i = 0 ; i <= 2 ; i++) {
         } else if (molho == 3) {
             molho = "Especial"
             preco = preco + 1.5
+        }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
         }
     }
 
