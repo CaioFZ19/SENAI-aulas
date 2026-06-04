@@ -1,0 +1,89 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let nomeCliente = prompt ("Digite seu nome: ")
+
+let pao, recheio, molho
+let preco = 0
+
+console.log ("")
+
+for (let i = 0 ; i <= 2 ; i++) {
+
+    if (i == 0){
+        console.log ("Pão Francês: R$1,50 - Digite 1 | Pão Integral: R$2,00 - Digite 2 | Pão Ciabatta: 2,50 - Digite 3")
+        pao = prompt ("Selecione o pão que você deseja: ")
+        if (pao == 1) {
+            pao = "Francês"
+            preco = preco + 1.5
+        } else if (pao == 2) {
+            pao = "Integral"
+            preco = preco + 2
+        } else if (pao == 3) {
+            pao = "Ciabatta"
+            preco = preco + 2.5
+        }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
+        }
+    }
+
+    else if (i == 1){
+        console.log ("Frango: R$5,00 - Digite 1 | Carne: R$6,50 - Digite 2 | Vegetariano: R$4,00 - Digite 3")
+        recheio = prompt ("Selecione o recheio que você deseja: ")
+        if (recheio == 1) {
+            recheio = "Frango"
+            preco = preco + 5
+        } else if (recheio == 2) {
+            recheio = "Carne"
+            preco = preco + 6.5
+        } else if (recheio == 3) {
+            recheio = "Vegetariano"
+            preco = preco + 4
+        }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
+        }
+    }
+
+
+    else if (i == 2){
+        console.log ("Maionese: R$0,50 - Digite 1 | Mostarda: R$0,50 - Digite 2 | Especial: R$1,50 - Digite 3  ")
+        molho = prompt ("Selecione o Molho que você deseja: ")
+        if (molho == 1) {
+            molho = "Maionese"
+            preco = preco + 0.5
+        } else if (molho == 2) {
+            molho = "Mostarda"
+            preco = preco + 0.5
+        } else if (molho == 3) {
+            molho = "Especial"
+            preco = preco + 1.5
+        }
+        else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
+        }
+    }
+
+    console.log ("")
+}
+
+console.log ("")
+
+console.log ("==============================")
+console.log ("          BYTE & BUN          ")
+console.log ("==============================")
+console.log (`Cliente: ${nomeCliente}`)
+console.log ("------------------------------")
+console.log (`Pão: ${pao}`)
+console.log (`Recheio: ${recheio}`)
+console.log (`Molho: ${molho}`)
+console.log ("------------------------------")
+console.log (`Total: R$${preco.toFixed(2)}`)
+console.log ("==============================")
+console.log ("         Bom apetite!         ")
+console.log ("==============================")
+console.log ("                              ")

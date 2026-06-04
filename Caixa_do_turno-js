@@ -1,0 +1,125 @@
+import promptSync from 'prompt-sync'
+const prompt = promptSync()
+
+let pao, recheio, molho, desconto, subtotal = 0, pedidos = 0, extras = 0
+
+let nomeCliente = prompt ("Digite seu nome: ")
+
+console.log ("")
+console.log ("Novo pedido: Digite 1")
+console.log ("Relatório parcial: Digite 2")
+console.log ("Encerrar turno: Digite 0")
+let opcao = prompt ()
+console.log ("")
+
+while (opcao != 0) {
+if (opcao == 1) {
+    for (let i = 0 ; i <= 2 ; i++) {
+
+        if (i == 0){
+            console.log ("Pão Francês: R$1,50 - Digite 1 | Pão Integral: R$2,00 - Digite 2 | Pão Ciabatta: 2,50 - Digite 3")
+            pao = prompt ("Selecione o pão que você deseja: ")
+            if (pao == 1) {
+                pao = "Francês"
+                subtotal = subtotal + 1.5
+            } else if (pao == 2) {
+                pao = "Integral"
+                subtotal = subtotal + 2
+            } else if (pao == 3) {
+                pao = "Ciabatta"
+                subtotal = subtotal + 2.5
+            }
+            else {
+            console.log ("Opção inválida. Selecione uma opção válida.")
+            i--
+            }
+        }
+
+        else if (i == 1){
+            console.log ("Frango: R$5,00 - Digite 1 | Carne: R$6,50 - Digite 2 | Vegetariano: R$4,00 - Digite 3")
+            recheio = prompt ("Selecione o recheio que você deseja: ")
+            if (recheio == 1) {
+                recheio = "Frango"
+                subtotal = subtotal + 5
+            } else if (recheio == 2) {
+                recheio = "Carne"
+                subtotal = subtotal + 6.5
+            } else if (recheio == 3) {
+                recheio = "Vegetariano"
+                subtotal = subtotal + 4
+            }
+            else {
+                console.log ("Opção inválida. Selecione uma opção válida.")
+                i--
+            }
+        }
+
+
+        else if (i == 2){
+            console.log ("Maionese: R$0,50 - Digite 1 | Mostarda: R$0,50 - Digite 2 | Especial: R$1,50 - Digite 3  ")
+            molho = prompt ("Selecione o Molho que você deseja: ")
+            if (molho == 1) {
+                molho = "Maionese"
+                subtotal = subtotal + 0.5
+            } else if (molho == 2) {
+                molho = "Mostarda"
+                subtotal = subtotal + 0.5
+            } else if (molho == 3) {
+                molho = "Especial"
+                subtotal = subtotal + 1.5
+            }
+            else {
+                console.log ("Opção inválida. Selecione uma opção válida.")
+                i--
+            }
+        }
+        console.log ("")
+    }
+    pedidos++
+
+    extras = prompt ("Até 3 extras por sanduíche, R$1,50 cada. Quantos extras deseja adicionar? ")
+    subtotal = subtotal + (extras * 1.5)
+
+} else if (opcao == 2) {
+    console.log ("Relatório parcial:")
+    console.log ("Pedidos realizados: " + pedidos)
+    console.log ("Valor total acumulado: R$" + subtotal.toFixed(2))
+    if (pedidos > 0) {
+        console.log(`Ticket Médio: R$${(subtotal/pedidos).toFixed(2)}`)
+    } else {
+    console.log("Ticket Médio: R$0,00")
+}
+}
+    console.log ("")
+    console.log ("Novo pedido: Digite 1")
+    console.log ("Relatório parcial: Digite 2")
+    console.log ("Encerrar turno: Digite 0")
+    opcao = prompt ()
+    console.log ("")
+}
+
+let total = subtotal
+
+if ((subtotal >= 10) && (extras >= 2)) {
+    desconto = true
+} else {
+    desconto = false
+}
+
+console.log ("==============================")
+console.log ("      RELATÓRIO DO TURNO      ")
+console.log ("==============================")
+console.log (`Cliente: ${nomeCliente}`)
+console.log ("------------------------------")
+console.log (`Pedidos realizados: ${pedidos}`)
+console.log (`Faturamento Bruto: R$${total.toFixed(2)}`)
+console.log (`Ticket Médio: R$${(total/pedidos).toFixed(2)}`)
+if (desconto == true) {
+    console.log (`Pedidos c/ desconto: ${total - (total * (15/100)).toFixed(2)}`)
+} else {
+    console.log ("sem descontos aplicados")
+}
+console.log ("==============================")
+console.log ("  Turno encerrado. Até logo!  ")
+console.log ("==============================")
+console.log ("                              ")
