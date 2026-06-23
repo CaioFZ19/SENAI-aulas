@@ -122,9 +122,9 @@ function menuPrincipal(){
             faturamentoTotal = faturamentoTotal + subTotal
             totalItensVendidos ++
         }
-        // COLOCAR UMA SEGUNDA LEITURA DENTRO DO WHILE!!!!
-        // V V V V V V V V V V V V V V V V V V V V V V V
-        
+        console.log("0. Fechar turno e sair")
+        console.log("1. Registrar item")
+        escolha = prompt()
         console.clear()
     }
 
