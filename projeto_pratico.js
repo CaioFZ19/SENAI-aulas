@@ -135,5 +135,4 @@ function menuPrincipal(){
     console.log(gerarDivisor("=", 40))
 }
 
-console.log (menuPrincipal())
-
+menuPrincipal()
