@@ -106,10 +106,11 @@ function menuPrincipal(){
         console.log("Combo Hambúrger Clássico🍔 - (1): R$25,00")
         console.log("Batata Frita Suprema🍟 - (2): R$15,00")
         console.log("Refrigerante Refil🥤 - (3): R$8,00")
-        
+
         registrarPedido()
         subTotal = valorItem
         totalItensVendidos = totalItensVendidos + quantidade
+        
 
         if (subTotal > 0) {
             faturamentoTotal = faturamentoTotal + subTotal
@@ -129,10 +130,11 @@ function menuPrincipal(){
     console.clear()
     exibirBoasVindas("BYTE-&-BUN")
     console.log(`Quantidade total de itens vendidos: ${totalItensVendidos}`)
-    console.log(`Faturamento bruto: ${faturamentoTotal}`)
-    console.log(`Desconto: $${desconto}`)
-    console.log(`Faturamento líquido: ${faturamentoLiquido}`)
+    console.log(`Faturamento bruto: $${faturamentoTotal.toFixed(2)}`)
+    console.log(`Desconto: $${desconto.toFixed(2)}`)
+    console.log(`Faturamento líquido: $${faturamentoLiquido.toFixed(2)}`)
     console.log(gerarDivisor("=", 40))
 }
 
 menuPrincipal()
+
