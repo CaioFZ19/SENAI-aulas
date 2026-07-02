@@ -115,7 +115,7 @@ function menuPrincipal(){
         if (subTotal > 0) {
             faturamentoTotal = faturamentoTotal + subTotal
         }
-        console.clear
+        console.clear()
         console.log("0. Fechar turno e sair")
         console.log("1. Registrar item")
         escolha = prompt()
