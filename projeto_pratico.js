@@ -130,7 +130,7 @@ function menuPrincipal(){
     exibirBoasVindas("BYTE-&-BUN")
     console.log(`Quantidade total de itens vendidos: ${totalItensVendidos}`)
     console.log(`Faturamento bruto: ${faturamentoTotal}`)
-    console.log(`Desconto: ${desconto}`)
+    console.log(`Desconto: $${desconto}`)
     console.log(`Faturamento líquido: ${faturamentoLiquido}`)
     console.log(gerarDivisor("=", 40))
 }
