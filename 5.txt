@@ -1,0 +1,9 @@
+let nomes = [a, b, c]
+
+const idades = [x, y, z]
+
+nomes = xxx (o nome do array muda.)
+
+idades = xxx (como é uma constante, não pode mudar o nome.)
+
+
